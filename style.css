@@ -213,3 +213,7 @@ h1 {
   max-height: 90%;
   border-radius: 12px;
 }
+.project-images img,
+.project-image {
+  cursor: zoom-in;
+}
