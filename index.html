@@ -29,7 +29,7 @@
         </div>
 
         <div class="hero-image-container">
-          <img src="images/profile.jpg" alt="Parker Lennig" class="hero-image" />
+          <img src="images/profile.jpg" alt="Parker Lennig" class="hero-image" onclick="openImage(this.src)" />
         </div>
       </div>
     </section>
@@ -56,12 +56,13 @@
           <h2>Welded Offroad Bumper for 4X4</h2>
           <p class="subtitle">Personal Manufacturing Project</p>
           <p class="description">
-            <strong>Objective:</strong> Repair damaged quarter panel and tailgate, and replace tail-light 
-            and rear bumper, as well as paint and weather-seal all components, due to from
-            not-at-fault collision with only $3,500 budget; lowest repair shop quoted at $11,000. <br><br>
-            <strong>Results:</strong> Purchased welder, tooling, and supplies for repair; performed body 
-            and paint repair in apartment parking lot, and welded armored steel bumper 
-            in garage with tight time constraints, under budget at ~$2,800. 
+            <strong>Objective:</strong> Repair damaged quarter panel and tailgate, and replace tail-light
+            and rear bumper, as well as paint and weather-seal all components, due to a
+            not-at-fault collision with only a $3,500 budget; lowest repair shop quoted at $11,000.
+            <br><br>
+            <strong>Results:</strong> Purchased welder, tooling, and supplies for repair; performed body
+            and paint repair in an apartment parking lot, and welded an armored steel bumper
+            in a garage with tight time constraints, under budget at about $2,800.
           </p>
           <div class="tags">
             <span>Manufacturing</span>
@@ -79,10 +80,12 @@
           <h2>Sway Bar End Link Design</h2>
           <p class="subtitle">Personal Design Project</p>
           <p class="description">
-            <strong>Objective:</strong>Design extended sway bar end links to eliminate suspension binding and unsafe 
-            vehicle characteristics when lifted 2".
-            <strong>Results:</strong> Modeled and developed manufacturing drawings utilizing GD&T for extended sway bar end links for the 100 series chassis;
-            designed to restore OEM geometry with a 2" suspension lift. Will be manufactured when I obtain a mini-lathe.
+            <strong>Objective:</strong> Design extended sway bar end links to eliminate suspension binding
+            and unsafe vehicle characteristics when lifted 2 inches.
+            <br><br>
+            <strong>Results:</strong> Modeled and developed manufacturing drawings utilizing GD&amp;T
+            for extended sway bar end links for the 100 series chassis; designed to restore OEM geometry
+            with a 2-inch suspension lift. Will be manufactured when I obtain a mini-lathe.
           </p>
           <div class="tags">
             <span>Design</span>
@@ -93,7 +96,7 @@
         </article>
 
         <article class="project-card">
-          <img src="images/project3.jpg" alt="Project 3 image" class="project-image" />
+          <img src="images/project3.jpg" alt="Project 3 image" class="project-image" onclick="openImage(this.src)" />
           <h2>Brake System Analysis</h2>
           <p class="subtitle">Automotive Engineering Study</p>
           <p class="description">
@@ -109,7 +112,7 @@
         </article>
 
         <article class="project-card">
-          <img src="images/project4.jpg" alt="Project 4 image" class="project-image" />
+          <img src="images/project4.jpg" alt="Project 4 image" class="project-image" onclick="openImage(this.src)" />
           <h2>RS390 Motor Project Concepts</h2>
           <p class="subtitle">Small Electromechanical Systems</p>
           <p class="description">
@@ -127,23 +130,34 @@
     </section>
 
   </main>
-<!-- LIGHTBOX -->
-<div id="lightbox" onclick="closeImage()">
-  <img id="lightbox-img" src="" />
-</div>
 
-<script>
-  function openImage(src) {
-    const lightbox = document.getElementById("lightbox");
-    const img = document.getElementById("lightbox-img");
+  <!-- LIGHTBOX -->
+  <div id="lightbox" onclick="closeImage(event)">
+    <img id="lightbox-img" src="" alt="Expanded project image" />
+  </div>
 
-    img.src = src;
-    lightbox.style.display = "flex";
-  }
+  <script>
+    function openImage(src) {
+      const lightbox = document.getElementById("lightbox");
+      const img = document.getElementById("lightbox-img");
+      img.src = src;
+      lightbox.style.display = "flex";
+      document.body.style.overflow = "hidden";
+    }
 
-  function closeImage() {
-    document.getElementById("lightbox").style.display = "none";
-  }
-</script>
+    function closeImage(event) {
+      if (event.target.id === "lightbox" || event.target.id === "lightbox-img") {
+        document.getElementById("lightbox").style.display = "none";
+        document.body.style.overflow = "auto";
+      }
+    }
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") {
+        document.getElementById("lightbox").style.display = "none";
+        document.body.style.overflow = "auto";
+      }
+    });
+  </script>
 </body>
 </html>
