@@ -48,8 +48,10 @@
       </div>
 
       <div class="projects-grid">
+
+        <!-- 2 IMAGES EXAMPLE -->
         <article class="project-card">
-          <div class="project-images">
+          <div class="project-images two-images">
             <img src="images/bumper2.jpg" alt="Vehicle Damage" onclick="openImage(this.src)" />
             <img src="images/bumper1.png" alt="Repaired Bumper" onclick="openImage(this.src)" />
           </div>
@@ -72,8 +74,9 @@
           </div>
         </article>
 
+        <!-- 2 IMAGES EXAMPLE -->
         <article class="project-card">
-          <div class="project-images">
+          <div class="project-images two-images">
             <img src="images/swaybar1.png" alt="CAD Model of Extended Link" onclick="openImage(this.src)" />
             <img src="images/swaybar2.png" alt="Engineering Drawing for Fabricated Parts" onclick="openImage(this.src)" />
           </div>
@@ -95,8 +98,13 @@
           </div>
         </article>
 
+        <!-- 3 IMAGES EXAMPLE -->
         <article class="project-card">
-          <img src="images/project3.jpg" alt="Project 3 image" class="project-image" onclick="openImage(this.src)" />
+          <div class="project-images three-images">
+            <img src="images/project3a.jpg" alt="Brake analysis image 1" onclick="openImage(this.src)" />
+            <img src="images/project3b.jpg" alt="Brake analysis image 2" onclick="openImage(this.src)" />
+            <img src="images/project3c.jpg" alt="Brake analysis image 3" onclick="openImage(this.src)" />
+          </div>
           <h2>Brake System Analysis</h2>
           <p class="subtitle">Automotive Engineering Study</p>
           <p class="description">
@@ -111,8 +119,14 @@
           </div>
         </article>
 
+        <!-- 4 IMAGES EXAMPLE -->
         <article class="project-card">
-          <img src="images/project4.jpg" alt="Project 4 image" class="project-image" onclick="openImage(this.src)" />
+          <div class="project-images four-images">
+            <img src="images/project4a.jpg" alt="RS390 concept image 1" onclick="openImage(this.src)" />
+            <img src="images/project4b.jpg" alt="RS390 concept image 2" onclick="openImage(this.src)" />
+            <img src="images/project4c.jpg" alt="RS390 concept image 3" onclick="openImage(this.src)" />
+            <img src="images/project4d.jpg" alt="RS390 concept image 4" onclick="openImage(this.src)" />
+          </div>
           <h2>RS390 Motor Project Concepts</h2>
           <p class="subtitle">Small Electromechanical Systems</p>
           <p class="description">
@@ -126,40 +140,40 @@
             <span>Concept Design</span>
           </div>
         </article>
+
       </div>
     </section>
 
   </main>
 
   <!-- LIGHTBOX -->
-  
-<div id="lightbox">
-  <img id="lightbox-img" src="" alt="Expanded image" />
-</div>
+  <div id="lightbox">
+    <img id="lightbox-img" src="" alt="Expanded image" />
+  </div>
 
-<script>
-  const lightbox = document.getElementById("lightbox");
-  const lightboxImg = document.getElementById("lightbox-img");
+  <script>
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
 
-  function openImage(src) {
-    lightboxImg.src = src;
-    lightbox.classList.add("active");
-    document.body.style.overflow = "hidden";
-  }
-
-  function closeImage() {
-    lightbox.classList.remove("active");
-    lightboxImg.src = "";
-    document.body.style.overflow = "";
-  }
-
-  lightbox.addEventListener("click", closeImage);
-
-  document.addEventListener("keydown", function (event) {
-    if (event.key === "Escape") {
-      closeImage();
+    function openImage(src) {
+      lightboxImg.src = src;
+      lightbox.classList.add("active");
+      document.body.style.overflow = "hidden";
     }
-  });
-</script>
+
+    function closeImage() {
+      lightbox.classList.remove("active");
+      lightboxImg.src = "";
+      document.body.style.overflow = "";
+    }
+
+    lightbox.addEventListener("click", closeImage);
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") {
+        closeImage();
+      }
+    });
+  </script>
 </body>
 </html>
