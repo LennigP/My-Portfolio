@@ -392,3 +392,56 @@ h1 {
     font-size: 0.85rem;
   }
 }
+/* EDUCATION & EXPERIENCE SECTION */
+
+.background-section {
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+
+.background-header {
+  margin-bottom: 30px;
+}
+
+.background-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.background-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.background-card h2 {
+  margin-bottom: 18px;
+}
+
+.background-card h3 {
+  margin-bottom: 6px;
+}
+
+.date {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 16px;
+}
+
+.experience-list {
+  margin-top: 14px;
+  padding-left: 20px;
+}
+
+.experience-list li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+@media (max-width: 800px) {
+  .background-grid {
+    grid-template-columns: 1fr;
+  }
+}
