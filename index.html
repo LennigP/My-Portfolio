@@ -3,29 +3,53 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Parker Lennig | Engineering Portfolio</title>
+  <title>Parker Lennig | Mechanical Engineering Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <main class="container">
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">Parker Lennig</a>
+
+      <nav class="nav-links">
+        <a href="#background">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a href="resume.pdf" class="nav-btn" target="_blank">Resume</a>
+    </div>
+  </header>
+
+  <main class="container" id="home">
 
     <!-- INTRO / HERO SECTION -->
     <section class="hero-section">
       <div class="hero-content">
         <div class="hero-text">
-          <h1 class="name">Engineering Portfolio</h1>
+          <p class="eyebrow">MECHANICAL ENGINEERING PORTFOLIO</p>
+          <h1 class="name">Parker Lennig</h1>
 
           <p class="hero-description">
-            Hi there! My name is Parker Lennig, I am a fourth year mechanical engineering student at UC Irvine nearing graduation with a strong
-            interest in design, manufacturing, and testing. I enjoy building real-world projects that require
-            problem solving, fabrication, and practical engineering decisions.
+            Fourth-year Mechanical Engineering student at UC Irvine with hands-on experience in
+            mechanical design, manufacturing, tooling, CAD, fabrication, testing, and practical
+            engineering problem solving.
           </p>
 
           <p class="hero-goals">
-            I am currently seeking full-time employment in mechanical design, manufacturing, or product
-            development where I can apply my skills in CAD, prototyping, and analysis while continuing
-            to grow as an engineer.
+            I am currently seeking full-time mechanical engineering opportunities in design,
+            manufacturing, product development, testing, or production support where I can apply
+            my skills in SolidWorks, GD&amp;T, prototyping, and hands-on fabrication.
           </p>
+
+          <div class="hero-cta">
+            <a href="#projects" class="cta-primary">View Projects</a>
+            <a href="resume.pdf" target="_blank" class="cta-secondary">Download Resume</a>
+            <a href="mailto:parkerlennig@gmail.com" class="cta-secondary">Email Me</a>
+          </div>
         </div>
 
         <div class="hero-image-container">
@@ -33,215 +57,251 @@
         </div>
       </div>
     </section>
-  <!-- EDUCATION & EXPERIENCE SECTION -->
-<section class="background-section">
-  <div class="background-header">
-    <p class="eyebrow">BACKGROUND</p>
-    <h1>Education & Professional Experience</h1>
-    <p class="intro">
-      My academic and professional background is focused on mechanical design, manufacturing,
-      prototyping, testing, and hands-on engineering problem solving.
-    </p>
-  </div>
 
-  <div class="background-grid">
-
-    <!-- EDUCATION -->
-    <article class="background-card">
-      <h2>Education</h2>
-
-      <h3>University of California, Irvine</h3>
-      <p class="subtitle">B.S. Mechanical Engineering</p>
-      <p class="date">Expected Graduation: June, 2026</p>
-
-      <p class="description">
-        Mechanical engineering undergraduate with coursework and project experience in mechanical
-        design, manufacturing, CAD, finite element analysis, thermodynamics, heat transfer, fluids,
-        dynamics, and controls.
-      </p>
-
-      <p class="description">
-        My time at UC Irvine has helped me develop a strong foundation in engineering fundamentals
-        while applying them through hands-on design projects, team-based manufacturing work, and
-        practical problem solving.
-      </p>
-
-      <div class="tags">
-        <span>Mechanical Design</span>
-        <span>Manufacturing</span>
-        <span>SolidWorks</span>
-        <span>FEA</span>
-        <span>Testing</span>
+    <!-- SKILLS SNAPSHOT -->
+    <section class="skills-section">
+      <div class="skills-header">
+        <p class="eyebrow">SKILLS SNAPSHOT</p>
+        <h1>Engineering Strengths</h1>
       </div>
-    </article>
 
-    <!-- PROFESSIONAL EXPERIENCE -->
-    <article class="background-card">
-      <h2>Professional Experience</h2>
+      <div class="skills-grid">
+        <article class="skill-card">
+          <h2>Design & CAD</h2>
+          <p>SolidWorks, mechanical assemblies, engineering drawings, GD&amp;T, ASME Y14.5, design iteration.</p>
+        </article>
 
-      <h3>Manufacturing Engineering Intern</h3>
-      <p class="subtitle">RBC Transport Dynamics — Santa Ana, CA</p>
-      <p class="date">June 2025 – Present</p>
+        <article class="skill-card">
+          <h2>Manufacturing</h2>
+          <p>3D printing, laser cutting, welding, shop-floor tooling, fixtures, fabrication, production support.</p>
+        </article>
 
-      <ul class="experience-list">
-        <li>
-          Utilized 3D printing, laser cutting, and aluminum extrusions to develop
-          cart organization fixtures and robotic arm shielding, enhancing shop-floor
-          efficiency, safety, and FOD control.
+        <article class="skill-card">
+          <h2>Analysis & Testing</h2>
+          <p>FEA, design validation, prototype testing, troubleshooting, performance improvement, documentation.</p>
+        </article>
 
-        </li>
-        <li>
-          Designed staking and assembly tooling and machinery under ASME Y14.5-2018 standards
-          in Solidworks used in production of aerospace spherical and rod end assemblies.
-        </li>
-        <li>
-          Developed shop-floor solutions using 3D printing, laser cutting, aluminum extrusion,
-          and hands-on fabrication methods.
-        </li>
-        <li>
-          Supported production operations by documenting production tooling, creating process
-          documentation, and maintaining spreadsheets to improve traceability.
-        </li>
-      </ul>
-
-      <div class="tags">
-        <span>Tooling Design</span>
-        <span>GD&amp;T</span>
-        <span>Production Support</span>
-        <span>Fabrication</span>
+        <article class="skill-card">
+          <h2>Hardware Integration</h2>
+          <p>Mechanical systems, LiDAR mounts, robotics hardware, sensors, Jetson Orin Nano, Arduino, controls support.</p>
+        </article>
       </div>
-    </article>
+    </section>
 
-  </div>
-</section>
+    <!-- EDUCATION & EXPERIENCE SECTION -->
+    <section class="background-section" id="background">
+      <div class="background-header">
+        <p class="eyebrow">BACKGROUND</p>
+        <h1>Education & Professional Experience</h1>
+        <p class="intro">
+          My academic and professional background is focused on mechanical design, manufacturing,
+          prototyping, testing, and hands-on engineering problem solving.
+        </p>
+      </div>
+
+      <div class="background-grid">
+
+        <!-- EDUCATION -->
+        <article class="background-card">
+          <h2>Education</h2>
+
+          <h3>University of California, Irvine</h3>
+          <p class="subtitle">B.S. Mechanical Engineering</p>
+          <p class="date">Expected Graduation: June 2026</p>
+
+          <p class="description">
+            Mechanical engineering undergraduate with coursework and project experience in mechanical
+            design, manufacturing, CAD, finite element analysis, thermodynamics, heat transfer, fluids,
+            dynamics, and controls.
+          </p>
+
+          <p class="description">
+            My time at UC Irvine has helped me develop a strong foundation in engineering fundamentals
+            while applying them through hands-on design projects, team-based manufacturing work, and
+            practical problem solving.
+          </p>
+
+          <div class="tags">
+            <span>Mechanical Design</span>
+            <span>Manufacturing</span>
+            <span>SolidWorks</span>
+            <span>FEA</span>
+            <span>Testing</span>
+          </div>
+        </article>
+
+        <!-- PROFESSIONAL EXPERIENCE -->
+        <article class="background-card">
+          <h2>Professional Experience</h2>
+
+          <h3>Manufacturing Engineering Intern</h3>
+          <p class="subtitle">RBC Transport Dynamics — Santa Ana, CA</p>
+          <p class="date">June 2025 – Present</p>
+
+          <ul class="experience-list">
+            <li>
+              Designed staking and assembly tooling under ASME Y14.5-2018 standards in SolidWorks
+              for aerospace spherical bearing and rod-end assembly production.
+            </li>
+            <li>
+              Developed cart organization fixtures and robotic arm shielding using 3D printing,
+              laser cutting, and aluminum extrusion to improve shop-floor efficiency, safety, and FOD control.
+            </li>
+            <li>
+              Supported production operations through tooling documentation, process documentation,
+              and spreadsheet-based traceability improvements.
+            </li>
+            <li>
+              Applied hands-on fabrication and design-for-manufacturing skills to solve production
+              and workflow issues in a fast-paced manufacturing environment.
+            </li>
+          </ul>
+
+          <div class="tags">
+            <span>Tooling Design</span>
+            <span>GD&amp;T</span>
+            <span>Production Support</span>
+            <span>Fabrication</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
     <!-- PROJECTS SECTION -->
-    <section class="projects-section">
+    <section class="projects-section" id="projects">
       <div class="projects-header">
         <div>
           <p class="eyebrow">FEATURED WORKS</p>
           <h1>Projects</h1>
         </div>
         <p class="intro">
-         Below, you will find a collection of both personal and school engineering projects
-          that reflect my experience in mechanical design, analysis, fabrication, prototyping,
-          and product development.
+          A collection of personal and academic engineering projects focused on mechanical design,
+          analysis, fabrication, prototyping, troubleshooting, and product development.
         </p>
       </div>
 
       <div class="projects-grid">
-<!--OFFROAD BUMPER -->
+
+        <!-- OFFROAD BUMPER -->
         <article class="project-card">
           <div class="project-images three-images">
             <img src="images/bumper1.png" alt="Initial Vehicle Damage" onclick="openGallery(this)" />
             <img src="images/bumper2.png" alt="Post-Body Work, During Bumper Fabrication" onclick="openGallery(this)" />
             <img src="images/bumper3.png" alt="Finished Repairs" onclick="openGallery(this)" />
           </div>
+
           <h2>Welded Offroad Bumper for 4x4</h2>
           <p class="subtitle">Personal Manufacturing Project</p>
+
           <p class="description">
-            <strong>Objective:</strong> I was to repair my personal vehicle's damaged quarter panel
-            and tailgate, replace my tail-light and rear bumper, as well as paint and weather-seal
-            all components. This project arose due to a not-at-fault collision with only a $3,500 budget;
-            I decided to go the route of repair as the lowest repair shop quoted the work to be done at roughly 
-            $11,000.
+            <strong>Objective:</strong> Repair collision damage on my personal vehicle, replace the damaged rear bumper,
+            paint and weather-seal repaired components, and fabricate a stronger rear bumper within a limited budget.
             <br><br>
-            <strong>Results:</strong> I bought myself welder, body repair tooling such as hammers and body filler
-            , and other miscellaneous supplies for repair; I performed the body and paint repair in
-            my apartment parking lot, and welded a 3/16" thick mild steel steel bumper in
-            a garage with tight time constraints, and whilst still in school; In the end, 
-            I came in under budget at about $2,800 for the total cost of repairs.
+            <strong>Results:</strong> Completed body repair and fabricated a 3/16-inch mild-steel rear bumper under a
+            $3,500 budget, reducing the estimated repair cost from approximately $11,000 to about $2,800.
           </p>
+
           <div class="tags">
-            <span>Manufacturing</span>
+            <span>Welding</span>
+            <span>Fabrication</span>
             <span>Budgeting</span>
-            <span>Time Management</span>
             <span>Problem Solving</span>
           </div>
         </article>
-        
-<!-- SENIOR DESIGN PROJECT -->
-<article class="project-card">
-  <div class="project-images four-images">
-    <img src="images/sen2.png" alt="Senior Design Poster" onclick="openGallery(this)" />
-    <img src="images/sen1.png" alt="Solidworks Assembly of Robot" onclick="openGallery(this)" />
-    <img src="images/sen3.png" alt="Three-Quarter View of Real Robot" onclick="openGallery(this)" />
-    <img src="images/sen4.png" alt="Annual Design Review Test Area" onclick="openGallery(this)" />
-  </div>
-<!-- GIF DISPLAY (NON-CLICKABLE, FULL WIDTH) -->
-<div class="project-gifs-row">
-  <img src="images/rob1.gif" alt="Autonomous Walking Robot Demonstration" />
-  <img src="images/rob2.gif" alt="Navigation of Autonomous Pathfinding utilizng Nav2" />
-</div>
-  <h2>Senior Design: Autonomous Walking Robot</h2>
-  <p class="subtitle">School Design, Manufacturing Project</p>
 
-  <p class="description">
-    <strong>Objective:</strong> As mechanical lead in a team of five, we were tasked with developing,
-    manufacturing, and testing an autonomous walking robot using leg linkages and drivetrains from
-    our sponsor, Professor J. Michael McCarthy. The goal was to create a robot with repeatable motion
-    while using LiDAR to map its environment and autonomously navigate around obstacles to reach a
-    target position.
-    <br><br>
-    <strong>Results:</strong> I developed the robot in SolidWorks and manufactured the full mechanical
-    assembly, adding design improvements such as brass rods for increased rigidity in the chassis and
-    upper leg linkages, along with mounts for the LiDAR sensor, Jetson Orin Nano controller, and other
-    hardware. The robot successfully demonstrated autonomous navigation and was presented at UC
-    Irvine's Annual Design Review.
-  </p>
+        <!-- SENIOR DESIGN PROJECT -->
+        <article class="project-card">
+          <div class="project-images four-images">
+            <img src="images/sen2.png" alt="Senior Design Poster" onclick="openGallery(this)" />
+            <img src="images/sen1.png" alt="SolidWorks Assembly of Robot" onclick="openGallery(this)" />
+            <img src="images/sen3.png" alt="Three-Quarter View of Real Robot" onclick="openGallery(this)" />
+            <img src="images/sen4.png" alt="Annual Design Review Test Area" onclick="openGallery(this)" />
+          </div>
 
-  <div class="tags">
-    <span>Design</span>
-    <span>Manufacturing</span>
-    <span>Control Systems</span>
-    <span>Testing</span>
-  </div>
-</article>
+          <div class="project-gifs-row">
+            <img src="images/rob1.gif" alt="Autonomous Walking Robot Demonstration" />
+            <img src="images/rob2.gif" alt="Navigation of Autonomous Pathfinding Using Nav2" />
+          </div>
 
-<!--EXTENDED SWAY BAR LINKS-->
+          <h2>Senior Design: Autonomous Walking Robot</h2>
+          <p class="subtitle">School Design & Manufacturing Project</p>
+
+          <p class="description">
+            <strong>Role:</strong> Mechanical Lead.
+            <br><br>
+            <strong>Objective:</strong> Develop, manufacture, and test an autonomous walking robot using leg linkages
+            and drivetrains from our sponsor, Professor J. Michael McCarthy. The goal was to achieve repeatable walking
+            motion while using LiDAR to map the environment and autonomously navigate around obstacles.
+            <br><br>
+            <strong>Results:</strong> Designed the robot in SolidWorks, manufactured the mechanical assembly, improved
+            chassis rigidity using brass rods, and integrated mounts for the LiDAR sensor, Jetson Orin Nano controller,
+            and supporting hardware. The robot successfully demonstrated autonomous navigation at UC Irvine's Annual
+            Design Review.
+          </p>
+
+          <div class="tags">
+            <span>Mechanical Lead</span>
+            <span>SolidWorks</span>
+            <span>Manufacturing</span>
+            <span>Robotics</span>
+            <span>Testing</span>
+          </div>
+        </article>
+
+        <!-- EXTENDED SWAY BAR LINKS -->
         <article class="project-card">
           <div class="project-images two-images">
             <img src="images/swaybar1.png" alt="CAD Model of Extended Link" onclick="openGallery(this)" />
             <img src="images/swaybar2.png" alt="Engineering Drawing for Fabricated Parts" onclick="openGallery(this)" />
           </div>
+
           <h2>Sway Bar End Link Design</h2>
           <p class="subtitle">Personal Design Project</p>
+
           <p class="description">
-            <strong>Objective:</strong> Design extended sway bar end links to eliminate suspension binding
-            and unsafe vehicle characteristics when lifted 2 inches.
+            <strong>Objective:</strong> Design extended sway bar end links to reduce suspension binding and restore safer
+            suspension geometry on a vehicle lifted by 2 inches.
             <br><br>
-            <strong>Results:</strong> Modeled and developed manufacturing drawings utilizing GD&amp;T
-            for extended sway bar end links for the 100 series chassis; designed to restore OEM geometry
-            with a 2-inch suspension lift. Will be manufactured when I obtain a mini-lathe.
+            <strong>Results:</strong> Modeled the components and developed manufacturing drawings using GD&amp;T for
+            100-series chassis sway bar end links. The design was developed to restore OEM-style geometry after a
+            suspension lift and prepare the parts for future fabrication.
           </p>
+
           <div class="tags">
-            <span>Design</span>
-            <span>Tolerancing</span>
-            <span>Geometric Dimensioning and Tolerancing</span>
+            <span>Mechanical Design</span>
+            <span>GD&amp;T</span>
+            <span>Suspension Geometry</span>
           </div>
         </article>
-<!--DRONE-->
+
+        <!-- DRONE -->
         <article class="project-card">
           <div class="project-images three-images">
-            <img src="images/dron1.png" alt="Solidworks CAD of Drone Assembly" onclick="openGallery(this)" />
+            <img src="images/dron1.png" alt="SolidWorks CAD of Drone Assembly" onclick="openGallery(this)" />
             <img src="images/dron2.png" alt="Simulation Results Summary with Design Iterations" onclick="openGallery(this)" />
-            <img src="images/dron3.png" alt="Finite Element Analysis of a Static Simulation on the Drone Arm" onclick="openGallery(this)" />
+            <img src="images/dron3.png" alt="Finite Element Analysis of Drone Arm" onclick="openGallery(this)" />
           </div>
-          <h2>Drone Arm Design Optimization using FEA</h2>
+
+          <h2>Drone Arm Design Optimization Using FEA</h2>
           <p class="subtitle">School Design Project</p>
+
           <p class="description">
-            <strong>Objective:</strong> Using finite element analysis simulations in Solidworks, I was to analyze
-            the arm of a quadcopter drone, and develop design iterations using the data of the simulations.<br><br>
-            <strong>Results:</strong> After a couple rounds of design changes and simulations, I was able to lessen the
-            stress and displacement experienced by the drone arm by roughly ~30-60%.
-          
+            <strong>Objective:</strong> Use finite element analysis in SolidWorks to evaluate a quadcopter drone arm and
+            develop improved design iterations based on simulation results.
+            <br><br>
+            <strong>Results:</strong> Completed multiple rounds of design changes and simulations, reducing stress and
+            displacement in the drone arm by approximately 30–60%.
           </p>
+
           <div class="tags">
             <span>CAD</span>
-            <span>Simulations</span>
             <span>FEA</span>
+            <span>Design Optimization</span>
           </div>
         </article>
-<!--106L ROBOT-->
+
+        <!-- 106L ROBOT -->
         <article class="project-card">
           <div class="project-images four-images">
             <img src="images/pneu1.png" alt="CAD Side View of Robot" onclick="openGallery(this)" />
@@ -249,47 +309,55 @@
             <img src="images/pneu3.png" alt="Real Side View of Robot" onclick="openGallery(this)" />
             <img src="images/pneu4.png" alt="Real Three-Quarter View of Robot" onclick="openGallery(this)" />
           </div>
+
           <h2>Pneumatic Powered Robot</h2>
-          <p class="subtitle">School Design, Manufacturing Project</p>
+          <p class="subtitle">School Design & Manufacturing Project</p>
+
           <p class="description">
-            <strong>Objective:</strong> As mechanical lead of my team, I was assigned to design and manufacture a pneumatic powered robot
-            with the ability to steer and propel itself along an obstacle course. The robot was limited in size to be smaller than
-            the diameter of the tire utilized on its top, and must use compressed air as its energy source for propulsion. <br><br>
-            <strong>Results:</strong> I designed a wooden chassis to hold a rack-and-pinion drive system, with a 3D-printed
-            steering system that was controlled with a servo. The robot was able to move forward at 1.2 ft/s, as well as have a steering range
-            of 110 degrees.
-          
+            <strong>Role:</strong> Mechanical Lead.
+            <br><br>
+            <strong>Objective:</strong> Design and manufacture a pneumatic-powered robot capable of steering and propelling
+            itself through an obstacle course while meeting size and compressed-air power constraints.
+            <br><br>
+            <strong>Results:</strong> Designed a wooden chassis, rack-and-pinion drive system, and 3D-printed steering
+            system controlled by a servo. The final robot reached 1.2 ft/s and achieved a steering range of 110 degrees.
           </p>
+
           <div class="tags">
+            <span>Mechanical Lead</span>
             <span>Design</span>
             <span>Manufacturing</span>
             <span>CAD</span>
           </div>
         </article>
-<!--ANTENNA-->
+
+        <!-- ANTENNA -->
         <article class="project-card">
           <div class="project-images three-images">
-            <img src="images/ant1.png" alt="Old Antennas removed from Factory Receiver" onclick="openGallery(this)" />
+            <img src="images/ant1.png" alt="Old Antennas Removed from Factory Receiver" onclick="openGallery(this)" />
             <img src="images/ant2.png" alt="New Antenna Wiring Soldered onto Factory Receiver" onclick="openGallery(this)" />
             <img src="images/ant3.png" alt="New Antenna Installed Next to Head Unit" onclick="openGallery(this)" />
           </div>
-          <h2>Stronger Antenna for Farther Vehicle Key Fob Range</h2>
-          <p class="subtitle">Personal Design, Manufacturing Project</p>
+
+          <h2>Stronger Antenna for Vehicle Key Fob Range</h2>
+          <p class="subtitle">Personal Design & Manufacturing Project</p>
+
           <p class="description">
-            <strong>Objective:</strong> To solder in a stronger antenna into my personal vehicle to increase the range
-            of the remote control key fob; the key fob would only intermittently work when standing immediately
-            next to the driver side door, as that is where the factory receiver is located. <br><br>
-            <strong>Results:</strong> After removing the factory antennas and installing a 315MHz Antenna, the key fob range
-            increased to a ~50 foot radius around the vehicle, which was a massive increase from before. The total cost of
-            the upgraded antenna came out to $18.
-          
+            <strong>Objective:</strong> Improve the range and reliability of a vehicle key fob by replacing the factory
+            receiver antenna with a stronger 315 MHz antenna.
+            <br><br>
+            <strong>Results:</strong> Removed the factory antenna, soldered in an upgraded antenna, and increased key fob
+            operating range to approximately a 50-foot radius around the vehicle for a total cost of about $18.
           </p>
+
           <div class="tags">
             <span>Electrical</span>
-            <span>Manufacturing</span>
+            <span>Soldering</span>
+            <span>Troubleshooting</span>
           </div>
         </article>
-<!--100 SERIES LC-->
+
+        <!-- 100 SERIES LC -->
         <article class="project-card">
           <div class="project-images four-images">
             <img src="images/cru1.png" alt="Isometric View of Land Cruiser" onclick="openGallery(this)" />
@@ -297,66 +365,93 @@
             <img src="images/cru3.png" alt="Rear Suspension Articulation" onclick="openGallery(this)" />
             <img src="images/cru4.png" alt="Stock Aluminum Wheel Model" onclick="openGallery(this)" />
           </div>
-          <h2>Solidworks Suspension Study of Toyota Land Cruiser</h2>
+
+          <h2>SolidWorks Suspension Study of Toyota Land Cruiser</h2>
           <p class="subtitle">Personal Design Project</p>
+
           <p class="description">
-            <strong>Objective:</strong> Following the Super Cub project, I gave myself a goal of modeling my personal vehicle's
-            front and rear suspension, to further understand its motion and articulation. The model had to have 7.5 inches of front
-            suspension travel, and 15 inches of rear suspension travel, in order to accurately emulate the vehicle. An additional goal was
-            set to omit the front and rear bumpers, so that armored bumpers can be later modeled in their place for production. <br><br>
-            <strong>Results:</strong> The final model can be seen above; not only was I able to achieve the specified suspension travel
-            of 7.5 inches of articulation in the front and 15 inches of suspension in the rear, but I also went further by accurately modeling
-            both the stock 16 inch aluminum wheels, as well as a pair of 275/70r16 Toyo Open Country III tires.
+            <strong>Objective:</strong> Model the front and rear suspension of my personal vehicle to better understand
+            suspension motion, articulation, and packaging for future bumper and accessory design.
+            <br><br>
+            <strong>Results:</strong> Created a SolidWorks model that achieved 7.5 inches of front suspension travel and
+            15 inches of rear suspension travel while also modeling the factory 16-inch wheels and 275/70R16 tires.
           </p>
+
           <div class="tags">
-            <span>Solidworks</span>
-            <span>Assembly and Mates</span>
+            <span>SolidWorks</span>
+            <span>Assembly Mates</span>
+            <span>Suspension Study</span>
           </div>
         </article>
-<!--SPEAKER-->
+
+        <!-- SPEAKER -->
         <article class="project-card">
           <div class="project-images two-images">
-            <img src="images/spe1.png" alt="Isometric View of Land Cruiser" onclick="openGallery(this)" />
-            <img src="images/spe2.png" alt="Full Suspension Articulation" onclick="openGallery(this)" />
+            <img src="images/spe1.png" alt="Dual Woofer Speaker Assembly" onclick="openGallery(this)" />
+            <img src="images/spe2.png" alt="Fabricated Speaker Enclosure" onclick="openGallery(this)" />
           </div>
+
           <h2>Fabrication of Dual Woofer Speaker</h2>
           <p class="subtitle">School Manufacturing Project</p>
+
           <p class="description">
-            <strong>Objective:</strong> As part of my Fabrication Safety course, we were to manufacture a dual woofer, bluetooth controlled
-            speaker. This includes soldering the control circuit board, fabricating the wooden box with powered hand tools,
-            and assembly of all components.<br><br>
-            <strong>Results:</strong> The dual woofer speaker was a success, being able to be controlled via iPhone from a maximum range of
-            30 feet, at a moderately strong volume and sufficient audio clarity. I was able to maintain a clean build quality, and filled
-            with acoustic foam to reduce box resonance.
+            <strong>Objective:</strong> Manufacture a dual-woofer Bluetooth speaker by soldering the control circuit board,
+            fabricating the wooden enclosure, and assembling all components.
+            <br><br>
+            <strong>Results:</strong> Built a functional Bluetooth speaker with approximately 30 feet of wireless range,
+            clean build quality, and acoustic foam added to reduce box resonance.
           </p>
+
           <div class="tags">
             <span>Fabrication</span>
             <span>Electrical</span>
+            <span>Assembly</span>
           </div>
         </article>
-        
-        <!--SUPER CUB-->
+
+        <!-- SUPER CUB -->
         <article class="project-card">
           <div class="project-images three-images">
             <img src="images/cub1.png" alt="Isometric View of Super Cub" onclick="openGallery(this)" />
             <img src="images/cub2.png" alt="Front and Side Views of Super Cub" onclick="openGallery(this)" />
-            <img src="images/cub3.png" alt="Detail Views of the Rear Wheel and Front Fork Assembly" onclick="openGallery(this)" />
+            <img src="images/cub3.png" alt="Detail Views of Rear Wheel and Front Fork Assembly" onclick="openGallery(this)" />
           </div>
-          <h2>Solidworks Modeling of Honda Super Cub</h2>
+
+          <h2>SolidWorks Modeling of Honda Super Cub</h2>
           <p class="subtitle">School Design Project</p>
+
           <p class="description">
-            <strong>Objective:</strong> As part of my Computer Aided Design Class, I was assigned to practice modeling a complex
-            object in Solidworks; I gave myself the goal of recreating a 2021 Honda Cub. This choice forced me to become familiar
-            with more complicated features of Solidworks, such as surface features. <br><br>
-            <strong>Results:</strong> The final model can be seen above; I was able to successfully replicate the Super Cub's body
-            lines and secondary features, like its storage rack and side mirrors. This was one of my first CAD projects with Solidworks.
-          
+            <strong>Objective:</strong> Recreate a 2021 Honda Super Cub in SolidWorks as a complex CAD modeling exercise
+            requiring surface features, curved body panels, and detailed component modeling.
+            <br><br>
+            <strong>Results:</strong> Modeled the Super Cub body lines and secondary features including the storage rack,
+            side mirrors, wheels, and fork assembly, building early experience with advanced SolidWorks tools.
           </p>
+
           <div class="tags">
-            <span>Design</span>
-            <span>Solidworks</span>
+            <span>SolidWorks</span>
+            <span>Surface Modeling</span>
+            <span>CAD</span>
           </div>
         </article>
+
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact-section" id="contact">
+      <p class="eyebrow">CONTACT</p>
+      <h1>Let’s Connect</h1>
+      <p>
+        I am currently seeking full-time mechanical engineering opportunities in design,
+        manufacturing, product development, testing, and production support.
+      </p>
+
+      <div class="contact-links">
+        <a href="mailto:parkerlennig@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank">LinkedIn</a>
+        <a href="https://github.com/YOUR-GITHUB" target="_blank">GitHub</a>
+        <a href="resume.pdf" target="_blank">Resume</a>
       </div>
     </section>
 
@@ -475,5 +570,6 @@
       if (event.key === "ArrowLeft") showPrevImage();
     });
   </script>
+
 </body>
 </html>
