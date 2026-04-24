@@ -467,109 +467,116 @@
     <div id="lightbox-counter"></div>
   </div>
 
-  <script>
-    const lightbox = document.getElementById("lightbox");
-    const lightboxImg = document.getElementById("lightbox-img");
-    const prevBtn = document.getElementById("prev-btn");
-    const nextBtn = document.getElementById("next-btn");
-    const closeBtn = document.getElementById("lightbox-close");
-    const counter = document.getElementById("lightbox-counter");
-    const caption = document.getElementById("lightbox-caption");
+<script>
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const prevBtn = document.getElementById("prev-btn");
+  const nextBtn = document.getElementById("next-btn");
+  const closeBtn = document.getElementById("lightbox-close");
+  const counter = document.getElementById("lightbox-counter");
+  const caption = document.getElementById("lightbox-caption");
 
-    let currentImages = [];
-    let currentIndex = 0;
+  let currentImages = [];
+  let currentIndex = 0;
 
-    function openGallery(clickedImg) {
-      const projectCard = clickedImg.closest(".project-card");
+  function openGallery(clickedImg) {
+    const projectCard = clickedImg.closest(".project-card");
 
-      if (projectCard) {
-        currentImages = Array.from(projectCard.querySelectorAll(".project-images img, .project-image"));
-      } else {
-        currentImages = [clickedImg];
-      }
-
-      currentIndex = currentImages.indexOf(clickedImg);
-      if (currentIndex < 0) currentIndex = 0;
-
-      updateLightboxImage();
-      lightbox.classList.add("active");
-      lightbox.setAttribute("aria-hidden", "false");
-      document.body.style.overflow = "hidden";
+    if (projectCard) {
+      currentImages = Array.from(projectCard.querySelectorAll(".project-images img"));
+    } else {
+      currentImages = [clickedImg];
     }
 
-    function updateLightboxImage() {
-      const currentImage = currentImages[currentIndex];
-      lightboxImg.src = currentImage.src;
-      lightboxImg.alt = currentImage.alt || "Expanded image";
-      caption.textContent = currentImage.alt || "";
-      counter.textContent = currentImages.length > 1 ? `${currentIndex + 1} / ${currentImages.length}` : "";
-      prevBtn.style.display = currentImages.length > 1 ? "flex" : "none";
-      nextBtn.style.display = currentImages.length > 1 ? "flex" : "none";
-    }
+    currentIndex = currentImages.indexOf(clickedImg);
+    if (currentIndex < 0) currentIndex = 0;
 
-    function showNextImage() {
-      if (currentImages.length <= 1) return;
-      currentIndex = (currentIndex + 1) % currentImages.length;
-      updateLightboxImage();
-    }
+    updateLightboxImage();
+    lightbox.classList.add("active");
+    lightbox.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  }
 
-    function showPrevImage() {
-      if (currentImages.length <= 1) return;
-      currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
-      updateLightboxImage();
-    }
+  function updateLightboxImage() {
+    const currentImage = currentImages[currentIndex];
 
-    function closeLightbox() {
-      lightbox.classList.remove("active");
-      lightbox.setAttribute("aria-hidden", "true");
-      lightboxImg.src = "";
-      lightboxImg.alt = "Expanded image";
-      caption.textContent = "";
-      document.body.style.overflow = "";
-      currentImages = [];
-      currentIndex = 0;
-      counter.textContent = "";
+    lightboxImg.src = currentImage.src;
+    lightboxImg.alt = currentImage.alt || "Expanded image";
+    caption.textContent = currentImage.alt || "";
 
-    prevBtn.addEventListener("click", function (event) {
-      event.stopPropagation();
-      showPrevImage();
-    });
+    counter.textContent =
+      currentImages.length > 1
+        ? `${currentIndex + 1} / ${currentImages.length}`
+        : "";
 
-    nextBtn.addEventListener("click", function (event) {
-      event.stopPropagation();
-      showNextImage();
-    });
+    prevBtn.style.display = currentImages.length > 1 ? "flex" : "none";
+    nextBtn.style.display = currentImages.length > 1 ? "flex" : "none";
+  }
 
-    closeBtn.addEventListener("click", function (event) {
-      event.stopPropagation();
-      closeLightbox();
-    });
+  function showNextImage() {
+    if (currentImages.length <= 1) return;
+    currentIndex = (currentIndex + 1) % currentImages.length;
+    updateLightboxImage();
+  }
 
-    lightboxImg.addEventListener("click", function (event) {
-      event.stopPropagation();
-    });
+  function showPrevImage() {
+    if (currentImages.length <= 1) return;
+    currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+    updateLightboxImage();
+  }
 
-    document.querySelector(".lightbox-content").addEventListener("click", function (event) {
-      event.stopPropagation();
-    });
+  function closeLightbox() {
+    lightbox.classList.remove("active");
+    lightbox.setAttribute("aria-hidden", "true");
+    lightboxImg.src = "";
+    lightboxImg.alt = "Expanded image";
+    caption.textContent = "";
+    counter.textContent = "";
+    document.body.style.overflow = "";
+    currentImages = [];
+    currentIndex = 0;
+  }
 
-    lightbox.addEventListener("click", function () {
-      closeLightbox();
-    });
+  prevBtn.addEventListener("click", function (event) {
+    event.stopPropagation();
+    showPrevImage();
+  });
 
-    document.addEventListener("keydown", function (event) {
-      if (!lightbox.classList.contains("active")) return;
+  nextBtn.addEventListener("click", function (event) {
+    event.stopPropagation();
+    showNextImage();
+  });
 
-      if (event.key === "Escape") closeLightbox();
-      if (event.key === "ArrowRight") showNextImage();
-      if (event.key === "ArrowLeft") showPrevImage();
-    });
-    }
-    function copyEmail() {
-      navigator.clipboard.writeText("parkerlennig@gmail.com");
-      alert("Email copied to clipboard!");
-    }
-  </script>
+  closeBtn.addEventListener("click", function (event) {
+    event.stopPropagation();
+    closeLightbox();
+  });
+
+  lightboxImg.addEventListener("click", function (event) {
+    event.stopPropagation();
+  });
+
+  document.querySelector(".lightbox-content").addEventListener("click", function (event) {
+    event.stopPropagation();
+  });
+
+  lightbox.addEventListener("click", function () {
+    closeLightbox();
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (!lightbox.classList.contains("active")) return;
+
+    if (event.key === "Escape") closeLightbox();
+    if (event.key === "ArrowRight") showNextImage();
+    if (event.key === "ArrowLeft") showPrevImage();
+  });
+
+  function copyEmail() {
+    navigator.clipboard.writeText("parkerlennig@gmail.com");
+    alert("Email copied to clipboard!");
+  }
+</script>
 
 </body>
 </html>
