@@ -187,10 +187,10 @@
             <img src="images/sen4.png" alt="Annual Design Review Test Area" onclick="openGallery(this)" />
           </div>
 
-          <div class="project-gifs-row">
-            <img src="images/rob1.gif" alt="Autonomous Walking Robot Demonstration" />
-            <img src="images/rob2.gif" alt="Navigation of Autonomous Pathfinding Using Nav2" />
-          </div>
+<div class="project-gifs-row synced-gifs" data-sync-interval="29500">
+  <img src="images/rob1.gif" data-src="images/rob1.gif" alt="Autonomous Walking Robot Demonstration" />
+  <img src="images/rob2.gif" data-src="images/rob2.gif" alt="Navigation of Autonomous Pathfinding Using Nav2" />
+</div>
 
           <h2>Senior Design: Autonomous Walking Robot</h2>
           <p class="subtitle">School Design & Manufacturing Project</p>
@@ -607,6 +607,36 @@
     navigator.clipboard.writeText("parkerlennig@gmail.com");
     alert("Email copied to clipboard!");
   }
+function syncProjectGifs() {
+  const gifRows = document.querySelectorAll(".synced-gifs");
+
+  gifRows.forEach((row) => {
+    const gifs = Array.from(row.querySelectorAll("img"));
+    const syncInterval = Number(row.dataset.syncInterval);
+
+    if (!gifs.length || !syncInterval) return;
+
+    function restartGifs() {
+      gifs.forEach((gif) => {
+        const originalSrc = gif.dataset.src;
+
+        // Temporarily clear the GIF source
+        gif.src = "";
+
+        // Force browser to reload GIF from frame 1
+        requestAnimationFrame(() => {
+          gif.src = `${originalSrc}?sync=${Date.now()}`;
+        });
+      });
+    }
+
+    restartGifs();
+    setInterval(restartGifs, syncInterval);
+  });
+}
+
+document.addEventListener("DOMContentLoaded", syncProjectGifs);
+  
 </script>
 
 </body>
