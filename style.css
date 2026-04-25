@@ -732,3 +732,41 @@ h2 {
   transform: translateY(-2px);
   box-shadow: 0 6px 16px rgba(0,0,0,0.15);
 }
+@media print {
+  body {
+    background: white;
+  }
+
+  .navbar,
+  .hero-cta,
+  .contact-links,
+  #lightbox {
+    display: none !important;
+  }
+
+  .container {
+    padding: 0;
+    max-width: 100%;
+  }
+
+  .project-card,
+  .background-card,
+  .skill-card {
+    box-shadow: none;
+    border: 1px solid #ccc;
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  h1, h2 {
+    page-break-after: avoid;
+  }
+
+  section {
+    page-break-inside: avoid;
+  }
+}
